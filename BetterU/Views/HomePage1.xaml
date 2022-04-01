@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             
+             x:Class="BetterU.Views.HomePage1">
+    <ContentPage.Content>
+
+        <StackLayout Spacing="12" Padding="10,10,10,10" VerticalOptions="CenterAndExpand" >
+
+            <Label Text="What would you like to work?" HorizontalOptions="Center" Padding="0,0,0,30"/>
+            <input:SelectionView x:Name="selectionView" ColumnSpacing="8" RowSpacing="8"/>
+
+
+            <Button Text="Logout" CornerRadius="50" Clicked="ButtonLogout_Clicked"/>
+            <Button CornerRadius="50" Text="Start my journey" Clicked="ButtonStart_Clicked"/>
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

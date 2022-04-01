@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BetterU.Views.RemoveTask">
+    <ContentPage.Content>
+        <StackLayout>
+            <Editor x:Name="Description" Text="{Binding Description}" HeightRequest="100"/>
+            <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonAutoriClicked" BackgroundColor="#b3b3ff"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

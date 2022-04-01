@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:views="clr-namespace:BetterU.Views"
+            x:Class="BetterU.TabbedPage1"
+            SelectedTabColor="White"
+            BackgroundColor="Transparent"
+            BarBackgroundColor="black"
+            BarTextColor="White"
+            UnselectedTabColor="#1a1a1a"
+            NavigationPage.HasNavigationBar="False"
+             >
+    <!--Pages can be added as references or inline-->
+    <TabbedPage.Children>
+        <NavigationPage Title="Home" IconImageSource="home.png">
+            <x:Arguments>
+                <views:HomePage2/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Tasks" IconImageSource="tasks.png">
+            <x:Arguments>
+                <views:TaskPage/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Daily" IconImageSource="yoga.png">
+            <x:Arguments>
+                <views:DailyPage/>
+            </x:Arguments>
+        </NavigationPage>
+
+        <NavigationPage Title="Profile" IconImageSource="profile.png">
+            <x:Arguments>
+                <views:ProfilePage/>
+            </x:Arguments>
+        </NavigationPage>
+
+    </TabbedPage.Children>
+</TabbedPage>

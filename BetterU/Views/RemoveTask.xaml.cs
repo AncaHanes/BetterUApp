@@ -22,7 +22,7 @@ namespace BetterU.Views
         {
             var slist = (Tasks)BindingContext;
             await App.Database.DeleteTasksAsync(slist);
-            _ = DisplayAlert("Mesaj", "Stergere realizata cu succes", "OK");
+           // _ = DisplayAlert("Mesaj", "Stergere realizata cu succes", "OK");
             await Navigation.PopAsync();
         }
     }

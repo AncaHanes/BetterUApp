@@ -38,10 +38,6 @@
                                               Clicked="ImageButton_Clicked"
                                              />
 
-
-
-
-
                         </FlexLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -50,9 +46,13 @@
 
         </ListView>
         <StackLayout Padding="10,10" Spacing="12"   >
-
-            <input:AdvancedSlider MaxValue="100"  MinValue="0" StepValue="10" ValueSuffix="%" Title="AlreadyDone:"/>
-
+            <Label Text="Rate your day and your productivity." />
+                <RadioButton Content="1" />
+                <RadioButton Content="2" />
+                <RadioButton Content="3" />
+            <RadioButton Content="4"
+                 IsChecked="true" />
+            <RadioButton Content="5" />
         </StackLayout>
     </StackLayout>
 

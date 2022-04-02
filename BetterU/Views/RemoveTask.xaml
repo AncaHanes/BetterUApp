@@ -4,7 +4,7 @@
              x:Class="BetterU.Views.RemoveTask">
     <ContentPage.Content>
         <StackLayout>
-            <Editor x:Name="Description" Text="{Binding Description}" HeightRequest="100"/>
+            <Label x:Name="Description" Text="{Binding Description}"  FontSize="Medium" HorizontalTextAlignment="Center" Margin="0,20"/>
             <Button Grid.Column="1" Text="Delete" Clicked="OnDeleteButtonAutoriClicked" BackgroundColor="#b3b3ff"/>
         </StackLayout>
     </ContentPage.Content>

@@ -1,12 +1,147 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              x:Class="BetterU.Views.HomePage2">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+    <ContentPage.Resources>
+        <ControlTemplate x:Key="RadioButtonTemplate">
+            <Frame BorderColor="#F3F2F1"
+                   BackgroundColor="#F3F2F1"
+                   HasShadow="False"
+                   HeightRequest="100"
+                   WidthRequest="100"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"
+                   Padding="0">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroupList>
+                        <VisualStateGroup x:Name="CheckedStates">
+                            <VisualState x:Name="Checked">
+                                <VisualState.Setters>
+                                    <Setter Property="BorderColor"
+                                            Value="#FF3300" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="1" />
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Unchecked">
+                                <VisualState.Setters>
+                                    <Setter Property="BackgroundColor"
+                                            Value="#F3F2F1" />
+                                    <Setter Property="BorderColor"
+                                            Value="#F3F2F1" />
+                                    <Setter TargetName="check"
+                                            Property="Opacity"
+                                            Value="0" />
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateGroupList>
+                </VisualStateManager.VisualStateGroups>
+                <Grid Margin="4"
+                      WidthRequest="100">
+                    <Grid WidthRequest="18"
+                          HeightRequest="18"
+                          HorizontalOptions="End"
+                          VerticalOptions="Start">
+                        <Ellipse Stroke="Blue"
+                                 Fill="White"
+                                 WidthRequest="16"
+                                 HeightRequest="16"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                        <Ellipse x:Name="check"
+                                 Fill="Black"
+                                 WidthRequest="8"
+                                 HeightRequest="8"
+                                 HorizontalOptions="Center"
+                                 VerticalOptions="Center" />
+                    </Grid>
+                    <ContentPresenter />
+                </Grid>
+            </Frame>
+        </ControlTemplate>
+
+        <Style TargetType="RadioButton">
+            <Setter Property="ControlTemplate"
+                    Value="{StaticResource RadioButtonTemplate}" />
+        </Style>
+    </ContentPage.Resources>
+
+    <!-- Content page-->
+    <StackLayout >
+        <Label Text="How are you feeling today?" 
+               FontAttributes="Bold" 
+               FontSize="Medium" 
+               HorizontalTextAlignment="Center"/>
+        
+        <StackLayout RadioButtonGroup.GroupName="moods"
+                 Orientation="Horizontal" >
+            <RadioButton Value="1">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="emoji1.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                        <Label Text="Very bad"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="2">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="emoji2.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                        <Label Text="Bad"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            <RadioButton Value="3">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="emoji3.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                        <Label Text="So and so"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+            
+            <RadioButton Value="">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="emoji4.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                        <Label Text="Quite good"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
+
+            <RadioButton Value="5">
+                <RadioButton.Content>
+                    <StackLayout>
+                        <Image Source="emoji5.png"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand" />
+                        <Label Text="Fantastic"
+                           HorizontalOptions="Center"
+                           VerticalOptions="End" />
+                    </StackLayout>
+                </RadioButton.Content>
+            </RadioButton>
         </StackLayout>
-    </ContentPage.Content>
+    </StackLayout>
+
 </ContentPage>

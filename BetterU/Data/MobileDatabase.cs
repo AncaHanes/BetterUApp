@@ -50,10 +50,22 @@ namespace BetterU.Data
             {
                 return _database.InsertAsync(task);
             }
-
-            //return _database.InsertAsync(task);
-
         }
+
+        public Task<int> SavePassAsync(RegUserTable pass)
+        {
+
+            if (pass.UserId != 0)
+            {
+                return _database.UpdateAsync(pass);
+            }
+            else
+            {
+                return _database.InsertAsync(pass);
+            }
+        }
+
+
 
         public Task<int> DeleteTasksAsync(Tasks task)
         {

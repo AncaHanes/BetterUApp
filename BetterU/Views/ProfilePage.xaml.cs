@@ -16,5 +16,27 @@ namespace BetterU.Views
         {
             InitializeComponent();
         }
+
+        async void ButtonLogout_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new LoginPage());
+        }
+
+        async void ButtonAboutUs_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AboutUsPage());
+        }
+        async void ButtonContactUs_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ContactUsPage());
+        }
+        async void ButtonProgress_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ProgressPage());
+        }
+        async void ButtonChangePass_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ChangePasswordPage());
+        }
     }
 }

@@ -44,7 +44,7 @@ namespace BetterU.Views
                 {
                     Description = Description.Text,
                     Date = DateTime.Today,
-                    Complete = true
+                    Complete = false
 
                 });
                 Description.Text = string.Empty;
@@ -91,5 +91,13 @@ namespace BetterU.Views
 
         }
 
+        private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            if(e.Value)
+            {
+                //update tabela Tasks, campul Complete
+            }
+
+        }
     }
 }

@@ -1,12 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BetterU.Views.ProfilePage">
+             x:Class="BetterU.Views.ProfilePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FEDBD0">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button Text="About Us" CornerRadius="50" Margin="10"
+                    Clicked="ButtonAboutUs_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
+            <Button Text="Contact Us" Margin="10" CornerRadius="50" Clicked="ButtonContactUs_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
+            <Button Text="Progress" Margin="10" CornerRadius="50" Clicked="ButtonProgress_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
+            <Button Text="Change Password" Margin="10" CornerRadius="50" Clicked="ButtonChangePass_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
+            <Button Text="Logout" Margin="10" CornerRadius="50" Clicked="ButtonLogout_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

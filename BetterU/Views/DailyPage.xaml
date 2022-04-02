@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="BetterU.Views.DailyPage">
+             x:Class="BetterU.Views.DailyPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FEDBD0">
 
     <ContentPage.Content>
 
-        <StackLayout Margin="15,10,15,0">
+        <StackLayout Margin="15,30,15,0">
             
                 <!--Morning -->
                 <Grid Margin="10">
@@ -19,7 +21,7 @@
                     </Grid.ColumnDefinitions>
                     <Frame Padding="5"
                                        CornerRadius="5"
-                                       BackgroundColor="#131C25"
+                                       BackgroundColor="#442C2E"
                                        Grid.Row="1"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"></Frame>
@@ -78,7 +80,7 @@
                 </Grid.ColumnDefinitions>
                 <Frame Padding="5"
                                        CornerRadius="5"
-                                       BackgroundColor="#131C25"
+                                       BackgroundColor="#442C2E"
                                        Grid.Row="1"
                                        Grid.Column="0"
                                        Grid.ColumnSpan="2"></Frame>

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BetterU;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,11 +22,12 @@ namespace BetterU.Views
              };
         }
 
+        /*
         async void ButtonLogout_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new LoginPage());
         }
-
+        */
         async void ButtonStart_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new TabbedPage1());

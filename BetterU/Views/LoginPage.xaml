@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BetterU.Views.LoginPage"
              NavigationPage.HasNavigationBar="False"
-             >
+             BackgroundColor="#FEDBD0">
     <ContentPage.Content >
         <ScrollView BackgroundColor="#FEDBD0">
 
@@ -34,8 +34,16 @@
                     <Entry Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryUserPassword" Grid.Row="1"/>
 
 
-                    <Button Text="Login" CornerRadius="20" WidthRequest="360" HorizontalOptions="CenterAndExpand" Grid.Row="3" TextColor="White"  Clicked="ButtonLogin_Clicked" BackgroundColor="#442C2E"/>
-                    <Button Text="Sign Up" CornerRadius="20" WidthRequest="360" HorizontalOptions="CenterAndExpand" Grid.Row="4" TextColor="White" Background="#442C2E" Clicked="ButtonSignUp_Clicked" />
+                    <Button Text="Login" CornerRadius="20" WidthRequest="360" HorizontalOptions="CenterAndExpand" 
+                            Grid.Row="3" TextColor="White" 
+                            Clicked="ButtonLogin_Clicked" 
+                            BackgroundColor="#442C2E"
+                            />
+                    <Button Text="Sign Up" CornerRadius="20" 
+                            WidthRequest="360" HorizontalOptions="CenterAndExpand" Grid.Row="4" 
+                            TextColor="White" 
+                            Background="#442C2E" 
+                            Clicked="ButtonSignUp_Clicked" />
                 </Grid>
 
             </StackLayout>

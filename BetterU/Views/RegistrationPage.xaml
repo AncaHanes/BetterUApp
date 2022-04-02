@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BetterU.Views.RegistrationPage"
-            >
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FEDBD0">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -33,7 +34,8 @@
                     </StackLayout>
                     <StackLayout Grid.Row="4">
 
-                        <Button Text="Register" CornerRadius="20" HorizontalOptions="CenterAndExpand" TextColor="White" WidthRequest="350" Margin="0,60,0,0" Clicked="Handle_Clicked" BackgroundColor="#1a1a1a"/>
+                        <Button Text="Register" CornerRadius="20" HorizontalOptions="CenterAndExpand" 
+                                TextColor="White" WidthRequest="350" Margin="0,60,0,0" Clicked="Handle_Clicked" BackgroundColor="#442C2E"/>
                     </StackLayout>
 
                 </Grid>

@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -33,6 +33,7 @@ namespace BetterU.Views
 
             if (myquery != null)
             {
+                Preferences.Set("password", EntryUserPassword.Text);
                 App.Current.MainPage = new NavigationPage(new HomePage1());
             }
             else

@@ -2,17 +2,21 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-             x:Class="BetterU.Views.TaskPage">
+             x:Class="BetterU.Views.TaskPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FEDBD0">
 
     <StackLayout>
         <Label Text="Hello! Time to set your goals!"
                 Padding="15"
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" 
+               TextColor="Black"
+               FontSize="Medium"/>
 
         <Editor x:Name="Description"
                     Margin="40,2,40,2" Placeholder="goals" Text="{Binding Description}"/>
 
-        <Button Text="Save" Clicked="OnSaveButtonClicked"/>
+        <Button Text="Save" Clicked="OnSaveButtonClicked" BackgroundColor="#442C2E" TextColor="White"/>
 
 
         <ListView x:Name="listView" 
@@ -25,10 +29,10 @@
                         <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Padding="20, 0">
                             <ContentView>
                                 <FlexLayout AlignItems="Center">
-                                    <input:CheckBox Type="Check" />
-
-                                    <Label Text="{Binding Description}" FontSize="Small" Margin="15"/>
-
+                                   <!-- <input:CheckBox Type="Check" /> -->
+                                    <CheckBox x:Name="checkBox" CheckedChanged="checkBox_CheckedChanged" IsChecked="{Binding Complete}"></CheckBox>
+                                             <Label Text="{Binding Description}" FontSize="Small" Margin="15"/>
+                                    
 
                                 </FlexLayout>
 
@@ -46,8 +50,9 @@
 
         </ListView>
         <StackLayout Padding="10,10" Spacing="12"   >
-            <Label Text="Rate your day and your productivity." />
-                <RadioButton Content="1" />
+            <Label Text="Rate your day and your productivity."  TextColor="Black"
+                   FontSize="Medium"/>
+            <RadioButton Content="1" />
                 <RadioButton Content="2" />
                 <RadioButton Content="3" />
             <RadioButton Content="4"

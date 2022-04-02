@@ -3,18 +3,25 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              
              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
-             
-             x:Class="BetterU.Views.HomePage1">
+            
+             x:Class="BetterU.Views.HomePage1"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FEDBD0">
     <ContentPage.Content>
 
         <StackLayout Spacing="12" Padding="10,10,10,10" VerticalOptions="CenterAndExpand" >
 
-            <Label Text="What would you like to work?" HorizontalOptions="Center" Padding="0,0,0,30"/>
-            <input:SelectionView x:Name="selectionView" ColumnSpacing="8" RowSpacing="8"/>
+            <Label Text="What would you like to work?" 
+                   TextColor="Black" 
+                   HorizontalOptions="Center" 
+                   Padding="0,0,0,30"
+                   FontSize="Title"
+                   />
+            <input:SelectionView x:Name="selectionView" ColumnSpacing="8" RowSpacing="8" Color="#442C2E"/>
 
 
-            <Button Text="Logout" CornerRadius="50" Clicked="ButtonLogout_Clicked"/>
-            <Button CornerRadius="50" Text="Start my journey" Clicked="ButtonStart_Clicked"/>
+          <!--  <Button Text="Logout" CornerRadius="50" Clicked="ButtonLogout_Clicked"/> -->
+            <Button CornerRadius="50" Text="Start my journey" Clicked="ButtonStart_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
         </StackLayout>
 
 

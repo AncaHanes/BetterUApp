@@ -2,11 +2,131 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="BetterU.Views.DailyPage">
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+        <StackLayout Margin="15,10,15,0">
+            
+                <!--Morning -->
+                <Grid Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="25" />
+                        <RowDefinition Height="200" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="4.5*" />
+                        <ColumnDefinition Width="5.5*" />
+                    </Grid.ColumnDefinitions>
+                    <Frame Padding="5"
+                                       CornerRadius="5"
+                                       BackgroundColor="#131C25"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"></Frame>
+                    <StackLayout Grid.Row="0"
+                                             Grid.RowSpan="2"
+                                             Grid.Column="0"
+                                             Margin="10">
+                        <Frame Padding="0"
+                                           CornerRadius="10">
+                            <Image VerticalOptions="FillAndExpand"
+                                                HeightRequest="150"
+                                               Aspect="Fill"
+                                               Source="morning1.png"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1"
+                                             Padding="5"
+                                             Spacing="10"
+                                             Grid.Row="1">
+                       
+                        
+                        <StackLayout Orientation="Horizontal"
+                                                 Spacing="0"
+                                                 Grid.Row="0"
+                                                 Grid.Column="0"
+                                                 Margin="5">
+                            <Frame BackgroundColor="#8B93A6"
+                                               BorderColor="#707070"
+                                               Padding="8"
+                                               CornerRadius="30">
+                                <Label TextColor="White" 
+                                                   Text="Morning"/>
+                            </Frame>
+                        </StackLayout>
+                        
+                    <Label TextColor="White" 
+                                           Text="Plan ahead! Write in journal."/>
+                    <Label TextColor="White" 
+                                               Text="Drink a galoon of water."/>
+                    <Label TextColor="White" 
+                                           Text="Resist the snooze. Exercise."/>
+                    </StackLayout>
+                </Grid>
+
+            
+
+                <!-- Evening -->
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="25" />
+                    <RowDefinition Height="200" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4.5*" />
+                    <ColumnDefinition Width="5.5*" />
+                </Grid.ColumnDefinitions>
+                <Frame Padding="5"
+                                       CornerRadius="5"
+                                       BackgroundColor="#131C25"
+                                       Grid.Row="1"
+                                       Grid.Column="0"
+                                       Grid.ColumnSpan="2"></Frame>
+                <StackLayout Grid.Row="0"
+                                             Grid.RowSpan="2"
+                                             Grid.Column="0"
+                                             Margin="10">
+                    <Frame Padding="0"
+                                           CornerRadius="10">
+                        <Image VerticalOptions="FillAndExpand"
+                                                HeightRequest="150"
+                                               Aspect="Fill"
+                                               Source="evening1.png"/>
+                    </Frame>
+                </StackLayout>
+                <StackLayout Grid.Column="1"
+                                             Padding="5"
+                                             Spacing="10"
+                                             Grid.Row="1">
+
+
+                    <StackLayout Orientation="Horizontal" Margin="5"
+                                                 Spacing="0"
+                                                 Grid.Row="0"
+                                                 Grid.Column="0">
+                        <Frame BackgroundColor="#8B93A6"
+                                               BorderColor="#707070"
+                                               Padding="8"
+                                               CornerRadius="30">
+                            <Label TextColor="White" 
+                                                   Text="Evening"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <Label TextColor="White" 
+                                           Text="Review your day. Practice gratitude."/>
+                    <Label TextColor="White" 
+                                               Text="Read for at least 15 min."/>
+                    <Label TextColor="White" 
+                                           Text="Follow a bedtime routine."/>
+                </StackLayout>
+            </Grid>
+
         </StackLayout>
-    </ContentPage.Content>
+
+
+        
+
+    </ContentPage.Content> 
+
 </ContentPage>

@@ -54,7 +54,7 @@
         <Label Text="How was your productivity?"  TextColor="Black"
                    FontSize="Medium" Margin="10"/>
         <StackLayout RadioButtonGroup.GroupName="completed"
-                 Orientation="Horizontal">
+                 Orientation="Horizontal" Margin="10">
 
 
             <RadioButton Content="25%" CharacterSpacing="10" Value="25" />

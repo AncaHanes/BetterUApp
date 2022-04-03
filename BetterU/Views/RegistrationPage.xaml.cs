@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using SQLite;
 using BetterU.Tables;
+using Xamarin.Essentials;
 
 namespace BetterU.Views
 {
@@ -42,6 +43,7 @@ namespace BetterU.Views
                 if (result)
                     await Navigation.PushAsync(new LoginPage());
             });
+            Preferences.Set("username", EntryUserName.Text);
         }
     }
 }

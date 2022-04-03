@@ -20,15 +20,13 @@ namespace BetterU.Data
 
         public Task<List<Tasks>> GetTasksAsync()
         {
-             return _database.Table<Tasks>().ToListAsync();
+            // return _database.Table<Tasks>().ToListAsync();
 
-            // String d = DateTime.Today.ToString();
+            DateTime thisDay = DateTime.Today;
 
-          //  return _database.Table<Tasks>()
-            //.Where(i => i.Date.ToString == d)
-            //.FirstOrDefaultAsync();
-
-
+            return _database.Table<Tasks>()
+            .Where(i => i.Date == thisDay).ToListAsync(); 
+            
         }
 
         public Task<Tasks> GetTasksAsync(int id)

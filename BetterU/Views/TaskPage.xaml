@@ -30,7 +30,7 @@
                             <ContentView>
                                 <FlexLayout AlignItems="Center">
                                    <!-- <input:CheckBox Type="Check" /> -->
-                                    <CheckBox x:Name="checkBox" CheckedChanged="checkBox_CheckedChanged" IsChecked="{Binding Complete}"></CheckBox>
+                                    <CheckBox x:Name="checkBox" CheckedChanged="checkBox_CheckedChanged" IsChecked="{Binding Complete}" ></CheckBox>
                                              <Label Text="{Binding Description}" FontSize="Small" Margin="15"/>
                                     
 
@@ -49,15 +49,19 @@
             </ListView.ItemTemplate>
 
         </ListView>
-        <StackLayout Padding="10,10" Spacing="12"   >
-            <Label Text="Rate your day and your productivity."  TextColor="Black"
-                   FontSize="Medium"/>
-            <RadioButton Content="1" />
-                <RadioButton Content="2" />
-                <RadioButton Content="3" />
-            <RadioButton Content="4"
-                 IsChecked="true" />
-            <RadioButton Content="5" />
+        
+        <!-- Already done -->
+        <Label Text="How was your productivity?"  TextColor="Black"
+                   FontSize="Medium" Margin="10"/>
+        <StackLayout RadioButtonGroup.GroupName="completed"
+                 Orientation="Horizontal">
+
+
+            <RadioButton Content="25%" CharacterSpacing="10" Value="25" />
+            <RadioButton Content="50%" CharacterSpacing="10" Value="50"/>
+            <RadioButton Content="75%" CharacterSpacing="10" Value="75"/>
+            <RadioButton Content="100%" CharacterSpacing="10" Value="100"/>
+           
         </StackLayout>
     </StackLayout>
 

@@ -96,6 +96,7 @@ namespace BetterU.Views
             if(e.Value)
             {
                 //update tabela Tasks, campul Complete
+                
             }
 
         }

@@ -55,22 +55,7 @@ namespace BetterU.Views
 
 
 
-        async void ImageButton_Clicked(object sender, EventArgs e)
-        {
-
-            // var task = await App.Database.GetTasksAsync(Convert.ToInt32(Description.Text));
-
-            var obj = (Tasks)BindingContext;
-            // await App.Database.DeleteTasksAsync(task);
-
-
-            // var item = await App.Database.GetTasksAsync(Convert.ToInt32(Description.Text));
-            if (obj != null)
-            {
-                await App.Database.DeleteTasksAsync(obj);
-            }
-
-        }
+       
         async void ItemSelected_Clicked(object sender, SelectedItemChangedEventArgs e)
         {
             if (e.SelectedItem != null)
@@ -88,6 +73,7 @@ namespace BetterU.Views
         {
 
             //  bool checkbox = e.Value;
+            if(checkBox.IsCheckedProperty)
 
         }
 

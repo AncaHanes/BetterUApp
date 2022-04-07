@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BetterU.Views.NotificationPage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FEDBD0">
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid Margin="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="1*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="backicon.png"
+                       Grid.Column="0"
+                       HorizontalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="TapBack" Tapped="TapBack_Tapped"/>
+                    </Image.GestureRecognizers>
+                </Image>
+                <Label Grid.Column="1"
+                       TextColor="#442C2E"
+                       Text="Notifications"
+                       FontSize="Large"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"
+                       Margin="20"/>
+            </Grid>
+            <StackLayout Orientation="Horizontal" Padding="0,30">
+                <TimePicker x:Name="_timePicker"
+                    Time="21:00:00"
+                    Format="T"
+                    TextColor="#442C2E"
+                    HorizontalOptions="CenterAndExpand"/>
+                
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0,0,15,0">
+                <CheckBox x:Name="isRepeat"/>
+                <Label Text="Repeat" TextColor="#442C2E" FontAttributes="Bold"/>
+            </StackLayout>
+            <Button Text="Notify Me" Clicked="Button_Clicked"  BackgroundColor="#442C2E" TextColor="White" Margin="10" CornerRadius="50"/>
+            <Button Text="Cancel Notif" Clicked="Button_Clicked_1"  BackgroundColor="#442C2E" TextColor="White" Margin="10" CornerRadius="50"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

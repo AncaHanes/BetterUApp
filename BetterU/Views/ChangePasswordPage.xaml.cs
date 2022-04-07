@@ -24,11 +24,11 @@ namespace BetterU.Views
 
         async void ButtonSaveChanges_Clicked(object sender, EventArgs e)
         {
-            var currentPassword = Preferences.Get("password", string.Empty);
-            var pass = new RegUserTable();
+            String currentPassword = Preferences.Get("password", string.Empty);
+            var pass = new Tables.RegUserTable();
             if(EntryPass1.Text != currentPassword)
             {
-                var newPassword = EntryPass1.Text;
+                String newPassword = EntryPass2.Text;
                 if (EntryPass1.Text == EntryPass2.Text)
                 {
                     pass.Password = newPassword;

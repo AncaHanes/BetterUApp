@@ -38,10 +38,10 @@
 
                             </ContentView>
 
-                            <ImageButton Source="deletetask.png" 
+                          <!--  <ImageButton Source="deletetask.png" 
                                               Clicked="ImageButton_Clicked"
                                              />
-
+                            -->
                         </FlexLayout>
                     </ViewCell>
                 </DataTemplate>
@@ -54,7 +54,7 @@
         <Label Text="How was your productivity?"  TextColor="Black"
                    FontSize="Medium" Margin="10"/>
         <StackLayout RadioButtonGroup.GroupName="completed"
-                 Orientation="Horizontal" Margin="10">
+                 Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand">
 
 
             <RadioButton Content="25%" CharacterSpacing="10" Value="25" />

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BetterU.Views.GratitudePage"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="#FEDBD0">
+    <ContentPage.Content>
+        <StackLayout Spacing="20">
+            <Label Text="What was your most relevant emotion? " FontSize="Medium" TextColor="#442C2E" Padding="5"/>
+            <Entry TextColor="#442C2E"/>
+            <Label Text="What is making you feel this way?" FontSize="Medium" TextColor="#442C2E" Padding="5"/>
+            <Entry TextColor="#442C2E"/>
+            <Label Text="Write down the things you are grateful today for." FontSize="Medium" TextColor="#442C2E" Padding="5"/>
+            <Entry TextColor="#442C2E"/>
+            <Button x:Name="BtnDone"
+                    Margin="50"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Done"
+                    BackgroundColor="#442C2E"
+                    TextColor="White"
+                    FontSize="Medium"
+                    CornerRadius="25" 
+                    Clicked="BtnDone_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

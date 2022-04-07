@@ -11,6 +11,7 @@
             <Button Text="Contact Us" Margin="10" CornerRadius="50" Clicked="ButtonContactUs_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
             <Button Text="Progress" Margin="10" CornerRadius="50" Clicked="ButtonProgress_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
             <Button Text="Change Password" Margin="10" CornerRadius="50" Clicked="ButtonChangePass_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
+            <Button Text="Set Notification" Margin="10" CornerRadius="50" Clicked="ButtonNotification_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
             <Button Text="Logout" Margin="10" CornerRadius="50" Clicked="ButtonLogout_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
         </StackLayout>
     </ContentPage.Content>

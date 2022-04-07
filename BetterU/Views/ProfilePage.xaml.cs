@@ -38,5 +38,9 @@ namespace BetterU.Views
         {
             await Navigation.PushAsync(new ChangePasswordPage());
         }
+        async void ButtonNotification_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NotificationPage());
+        }
     }
 }

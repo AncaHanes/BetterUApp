@@ -146,6 +146,7 @@
                 </RadioButton.Content>
             </RadioButton>
         </StackLayout>
+        <Button Margin="10" HorizontalOptions="End" TextColor="White" BackgroundColor="#442C2E" Text="Next" Clicked="ImageButton_Clicked"/>
     </StackLayout>
 
 </ContentPage>

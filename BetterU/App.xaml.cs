@@ -1,6 +1,8 @@
 ﻿
 using BetterU.Data;
 using BetterU.Views;
+using Plugin.LocalNotification;
+using Plugin.LocalNotification.EventArgs;
 using System;
 using System.IO;
 using Xamarin.Forms;
@@ -27,8 +29,11 @@ namespace BetterU
         {
             InitializeComponent();
 
+            
+
             MainPage = new NavigationPage(new LoginPage());
         }
+       
 
         protected override void OnStart()
         {

@@ -10,16 +10,16 @@ using Xamarin.Forms.Xaml;
 namespace BetterU.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage2 : ContentPage
+    public partial class GratitudePage : ContentPage
     {
-        public HomePage2()
+        public GratitudePage()
         {
             InitializeComponent();
         }
 
-        private void ImageButton_Clicked(object sender, EventArgs e)
+        private void BtnDone_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new GratitudePage());
+            Navigation.PopAsync();
         }
     }
 }

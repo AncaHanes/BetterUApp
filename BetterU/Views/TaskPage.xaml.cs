@@ -68,23 +68,31 @@ namespace BetterU.Views
         }
 
 
-
-        private void CheckBox_CheckChanged(object sender, CheckedChangedEventArgs e)
+        async void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
 
-            //  bool checkbox = e.Value;
-            if(checkBox.IsCheckedProperty)
+            var checkbox = (CheckBox)sender;
+            var ob = checkbox.BindingContext as Tasks;
+            if (ob != null)
 
-        }
-
-        private void checkBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
-        {
-            if(e.Value)
             {
-                //update tabela Tasks, campul Complete
-                
-            }
 
+                AddOrUpdatetheResult(ob, checkbox);
+
+            }
+        }
+        async void AddOrUpdatetheResult(Tasks ob, CheckBox checkbox)
+        {
+            if (checkbox.IsChecked)
+            {
+                ob.Complete = true;
+                await App.Database.SaveTasksAsync(ob);
+            }
+            else
+            {
+                ob.Complete = false;
+                await App.Database.SaveTasksAsync(ob);
+            }
         }
     }
 }

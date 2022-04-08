@@ -29,31 +29,28 @@
                         <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Padding="20, 0">
                             <ContentView>
                                 <FlexLayout AlignItems="Center">
-                                   <!-- <input:CheckBox Type="Check" /> -->
-                                    <CheckBox x:Name="checkBox" CheckedChanged="checkBox_CheckedChanged" IsChecked="{Binding Complete}" ></CheckBox>
-                                             <Label Text="{Binding Description}" FontSize="Small" Margin="15"/>
-                                    
-
+                                    <!-- <input:CheckBox Type="Check" /> -->
+                                    <CheckBox x:Name="check" CheckedChanged="checkBox_CheckedChanged" IsChecked="{Binding Complete}" ></CheckBox>
+                                    <Label Text="{Binding Description}" FontSize="Small" Margin="15"/>
                                 </FlexLayout>
 
                             </ContentView>
-
-                          <!--  <ImageButton Source="deletetask.png" 
+                            
+                            <!--  <ImageButton Source="deletetask.png" 
                                               Clicked="ImageButton_Clicked"
                                              />
                             -->
+
                         </FlexLayout>
                     </ViewCell>
                 </DataTemplate>
-
             </ListView.ItemTemplate>
-
         </ListView>
         
         <!-- Already done -->
-        <Label Text="How was your productivity?"  TextColor="Black"
+        <Label Text="End of the day. How was your productivity?"  TextColor="Black"
                    FontSize="Medium" Margin="10"/>
-        <StackLayout RadioButtonGroup.GroupName="completed"
+        <StackLayout RadioButtonGroup.GroupName="completed" PropertyChanged=""
                  Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand">
 
 

@@ -1,15 +1,16 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
-using SQLite;
 
 namespace BetterU.Tables
 {
-    public class Moods
+    public class Notifications
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
-        public int Value { get; set; }
-        public DateTime Date { get; set; }
+        public TimeSpan Hour { get; set; }
+
+        public bool isRepeatChecked { get; set; }
     }
 }

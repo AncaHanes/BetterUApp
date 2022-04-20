@@ -50,7 +50,7 @@
         <!-- Already done -->
         <Label Text="End of the day. How was your productivity?"  TextColor="Black"
                    FontSize="Medium" Margin="10"/>
-        <StackLayout RadioButtonGroup.GroupName="completed" PropertyChanged=""
+        <StackLayout RadioButtonGroup.GroupName="completed" 
                  Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand">
 
 

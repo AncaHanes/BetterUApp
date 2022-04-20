@@ -16,6 +16,8 @@ namespace BetterU.Data
         {
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Tasks>().Wait();
+            _database.CreateTableAsync<Notifications>().Wait();
+            _database.CreateTableAsync<Moods>().Wait();
         }
 
         public Task<List<Tasks>> GetTasksAsync()
@@ -47,6 +49,31 @@ namespace BetterU.Data
             else
             {
                 return _database.InsertAsync(task);
+            }
+        }
+        
+         public Task<int> SaveMoodsAsync(Moods mood)
+        {
+
+            if (mood.ID != 0)
+            {
+                return _database.UpdateAsync(mood);
+            }
+            else
+            {
+                return _database.InsertAsync(mood);
+            }
+        }
+        public Task<int> SaveNotifAsync(Notifications notif)
+        {
+
+            if (notif.ID != 0)
+            {
+                return _database.UpdateAsync(notif);
+            }
+            else
+            {
+                return _database.InsertAsync(notif);
             }
         }
 

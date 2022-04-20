@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BetterU.Tables;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,73 @@ namespace BetterU.Views
 
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
+           
+           // var radiobutton = Radiobutton(sender);
+           // var ob = radiobutton.BindingContext as Moods;
+          //  if (ob != null)
+           // {
+
+             //   AddOrUpdatetheResult(ob, radiobutton);
+
+         //   }
+
+
             Navigation.PushAsync(new GratitudePage());
         }
+
+        async void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+              
+            int x;
+            if(radio1.IsChecked)
+            {
+                x = 1;
+                var obs = new Moods();
+                obs.Value = x;
+                obs.Date = DateTime.Today;
+               // label.Text = obs.Value.ToString();
+                await App.Database.SaveMoodsAsync(obs);
+            }
+            if (radio2.IsChecked)
+            {
+                x = 2;
+                var obs = new Moods();
+                obs.Value = x;
+                obs.Date = DateTime.Today;
+                // label.Text = obs.Value.ToString();
+                await App.Database.SaveMoodsAsync(obs);
+            }
+            if (radio3.IsChecked)
+            {
+                x = 3;
+                var obs = new Moods();
+                obs.Value = x;
+                obs.Date = DateTime.Today;
+                // label.Text = obs.Value.ToString();
+                await App.Database.SaveMoodsAsync(obs);
+            }
+            if (radio4.IsChecked)
+            {
+                x = 4;
+                var obs = new Moods();
+                obs.Value = x;
+                obs.Date = DateTime.Today;
+                // label.Text = obs.Value.ToString();
+                await App.Database.SaveMoodsAsync(obs);
+            }
+            if (radio5.IsChecked)
+            {
+                x = 5;
+                var obs = new Moods();
+                obs.Value = x;
+                obs.Date = DateTime.Today;
+                // label.Text = obs.Value.ToString();
+                await App.Database.SaveMoodsAsync(obs);
+                label.Text = obs.Value.ToString();
+            }
+           
+        }
+        
+       
     }
 }

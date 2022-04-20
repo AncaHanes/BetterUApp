@@ -1,4 +1,5 @@
-﻿using Plugin.LocalNotification;
+﻿using BetterU.Tables;
+using Plugin.LocalNotification;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,15 +23,35 @@ namespace BetterU.Views
             Navigation.PopAsync();
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        async void Button_Clicked(object sender, EventArgs e)
         {
+            if(isRepeat.IsChecked)
+            {
+                isRepeat.IsChecked = true;
+                await App.Database.SaveNotifAsync(new Notifications
+                {
+
+                    Hour = _timePicker.Time,
+                    isRepeatChecked = true
+
+                }); 
+            }
+            else
+            {
+                await App.Database.SaveNotifAsync(new Notifications
+                {
+
+                    Hour = _timePicker.Time,
+                    isRepeatChecked = false
+
+                });
+            }
             NotificationRequest notiObj = new NotificationRequest
             {
                 Title = "Hello! Time to analyze your work!",
                 Description = "How was your day?",
                 NotificationId = 100,
 
-                // Repeats = isRepeat.IsChecked ? NotificationRepeat.TimeInterval : NotificationRepeat.No,
                 // Repeats = isRepeat.IsChecked ? NotificationRepeat.TimeInterval : NotificationRepeat.No,
                 // NotifyRepeatInterval = new TimeSpan(0, 0, 0, 10),
                 // NotifyTime = DateTime.Now.AddSeconds(10)

@@ -82,8 +82,11 @@
                Padding="0,0,0,150"/>
         
         <StackLayout RadioButtonGroup.GroupName="moods"
-                 Orientation="Horizontal" >
-            <RadioButton Value="1">
+                      Orientation="Horizontal"
+                     >
+            <RadioButton Value="1" IsChecked="False" 
+                         x:Name="radio1"
+                         CheckedChanged="RadioButton_CheckedChanged">
                 <RadioButton.Content>
                     <StackLayout>
                         <Image Source="emoji1.png"
@@ -95,7 +98,7 @@
                     </StackLayout>
                 </RadioButton.Content>
             </RadioButton>
-            <RadioButton Value="2">
+            <RadioButton Value="2" IsChecked="False" CheckedChanged="RadioButton_CheckedChanged" x:Name="radio2">
                 <RadioButton.Content>
                     <StackLayout>
                         <Image Source="emoji2.png"
@@ -107,7 +110,7 @@
                     </StackLayout>
                 </RadioButton.Content>
             </RadioButton>
-            <RadioButton Value="3">
+            <RadioButton Value="3" IsChecked="False" CheckedChanged="RadioButton_CheckedChanged" x:Name="radio3">
                 <RadioButton.Content>
                     <StackLayout>
                         <Image Source="emoji3.png"
@@ -119,8 +122,8 @@
                     </StackLayout>
                 </RadioButton.Content>
             </RadioButton>
-            
-            <RadioButton Value="">
+
+            <RadioButton Value="4" IsChecked="False" CheckedChanged="RadioButton_CheckedChanged" x:Name="radio4">
                 <RadioButton.Content>
                     <StackLayout>
                         <Image Source="emoji4.png"
@@ -133,7 +136,7 @@
                 </RadioButton.Content>
             </RadioButton>
 
-            <RadioButton Value="5">
+            <RadioButton Value="5" IsChecked="False" CheckedChanged="RadioButton_CheckedChanged" x:Name="radio5">
                 <RadioButton.Content>
                     <StackLayout>
                         <Image Source="emoji5.png"
@@ -146,6 +149,8 @@
                 </RadioButton.Content>
             </RadioButton>
         </StackLayout>
+        <Label Text="{Binding Value}" x:Name="label"/>
+        
         <Button Margin="10" HorizontalOptions="End" TextColor="White" BackgroundColor="#442C2E" Text="Next" Clicked="ImageButton_Clicked"/>
     </StackLayout>
 

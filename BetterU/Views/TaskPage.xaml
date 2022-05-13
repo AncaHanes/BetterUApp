@@ -18,7 +18,32 @@
 
         <Button Text="Save" Clicked="OnSaveButtonClicked" BackgroundColor="#442C2E" TextColor="White"/>
 
+        <Label Text="Overdue" Margin="10"/>
+        <ListView x:Name="listViewOverdue" 
+                          Margin="20" 
+                          ItemsSource="{Binding Description}"
+                          ItemSelected="ItemSelected_Clicked">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <FlexLayout JustifyContent="SpaceBetween" AlignItems="Center" Padding="20, 0">
+                            <ContentView>
+                                <FlexLayout AlignItems="Center">
+                                    <!-- <input:CheckBox Type="Check" /> -->
+                                    <CheckBox x:Name="check" CheckedChanged="checkBox_CheckedChanged" IsChecked="{Binding Complete}" ></CheckBox>
+                                    <Label Text="{Binding Description}" FontSize="Small" Margin="15"/>
+                                </FlexLayout>
 
+                            </ContentView>
+
+                        </FlexLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        <!--Overdue -->
+        <Label Text="Current" Margin="10"/>
         <ListView x:Name="listView" 
                           Margin="20" 
                           ItemsSource="{Binding Description}"
@@ -35,31 +60,17 @@
                                 </FlexLayout>
 
                             </ContentView>
-                            
-                            <!--  <ImageButton Source="deletetask.png" 
-                                              Clicked="ImageButton_Clicked"
-                                             />
-                            -->
 
                         </FlexLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
-        <!-- Already done -->
-        <Label Text="End of the day. How was your productivity?"  TextColor="Black"
-                   FontSize="Medium" Margin="10"/>
-        <StackLayout RadioButtonGroup.GroupName="completed" 
-                 Orientation="Horizontal" Margin="10" HorizontalOptions="CenterAndExpand">
 
 
-            <RadioButton Content="25%" CharacterSpacing="10" Value="25" />
-            <RadioButton Content="50%" CharacterSpacing="10" Value="50"/>
-            <RadioButton Content="75%" CharacterSpacing="10" Value="75"/>
-            <RadioButton Content="100%" CharacterSpacing="10" Value="100"/>
-           
-        </StackLayout>
+
+
+
     </StackLayout>
 
 </ContentPage>

@@ -31,6 +31,16 @@ namespace BetterU.Data
             
         }
 
+         public Task<List<Tasks>> GetTasksOverdueAsync()
+        {
+            // return _database.Table<Tasks>().ToListAsync();
+
+            DateTime thisDay = DateTime.Today;
+
+            return _database.Table<Tasks>()
+            .Where(i => i.Date != thisDay && i.Complete==false).ToListAsync();
+
+        }
         public Task<Tasks> GetTasksAsync(int id)
         {
 

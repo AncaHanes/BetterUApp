@@ -33,6 +33,8 @@ namespace BetterU.Views
             base.OnAppearing();
 
             listView.ItemsSource = await App.Database.GetTasksAsync();
+
+            listViewOverdue.ItemsSource = await App.Database.GetTasksOverdueAsync();
         }
 
         async void OnSaveButtonClicked(object sender, EventArgs e)

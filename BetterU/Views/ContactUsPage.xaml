@@ -40,6 +40,7 @@
                     FontSize="Medium"
                     CornerRadius="25" 
                     Clicked="BtnCall_Clicked"/>
+            <Label TextColor="#442C2E" Text="*If you have any ideas for improvements, feel free to let us know. :)" FontSize="Caption" HorizontalTextAlignment="Center" />
         </StackLayout>
     
     </ContentPage.Content>

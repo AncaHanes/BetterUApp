@@ -27,16 +27,17 @@
                        HorizontalTextAlignment="Center"
                        Margin="20"/>
             </Grid>
-            <Label Margin="10" Text="        Hi! We'll start by asking you if you're dreaming. Do you have big goals? Can you imagine your ideal life? What are you doing to get there?" />
+            <Label Text="Hello!" Margin="20" TextColor="#442C2E" FontSize="Large"/>
+            <Label LineBreakMode="WordWrap" Margin="10" HorizontalTextAlignment="Center" TextColor="#442C2E" Text="     We'll start by asking you if you're dreaming. Do you have big goals? Can you imagine your ideal life? What are you doing to get there?" />
                    
               <Label 
                   Text="Take small steps each day. This application is designed for you to help you get better organized. It takes self-discipline, perseverance and courage. But you have a big advantage over other people! You started! We want to be with you on your journey and keep you motivated. We recommend you to look in the profile section at your progress, this will make you enthusiastic, happy."
                    
-                   Margin="10" />
+                   Margin="20,0,0,20" LineBreakMode="WordWrap" />
 
-            <Label Text="Hope to see you growing!" FontAttributes="Italic" Margin="10"/>
-            <Label Text="Becoming the best version of yourself! Imagine! Imagine! Imagine..." Margin="10"/>
-            <Label Text="Start now! Make it happen. Make your reality better than your ideal." HorizontalTextAlignment="Center" FontAttributes="Bold"/>
+            <Label Text="Hope to see you growing!" TextColor="#442C2E" FontAttributes="Italic" HorizontalTextAlignment="Center"/>
+            <Label Text="Becoming the best version of yourself.... Imagine!" HorizontalTextAlignment="Center"/>
+            <Label Text="Make your reality better than your ideal." HorizontalTextAlignment="Center" FontAttributes="Bold"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

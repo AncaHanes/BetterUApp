@@ -27,9 +27,9 @@ namespace BetterU
         }
         public App()
         {
-            InitializeComponent();
+            DevExpress.XamarinForms.Charts.Initializer.Init();
 
-            
+            InitializeComponent();
 
             MainPage = new NavigationPage(new LoginPage());
         }

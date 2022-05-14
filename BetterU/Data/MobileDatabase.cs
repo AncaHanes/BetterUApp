@@ -19,7 +19,11 @@ namespace BetterU.Data
             _database.CreateTableAsync<Notifications>().Wait();
             _database.CreateTableAsync<Moods>().Wait();
         }
+        public Task<List<Moods>> GetMoodsAsync()
+        {
+             return _database.Table<Moods>().ToListAsync();
 
+        }
         public Task<List<Tasks>> GetTasksAsync()
         {
             // return _database.Table<Tasks>().ToListAsync();

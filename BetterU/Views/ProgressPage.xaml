@@ -21,12 +21,16 @@
                 </Image>
                 <Label Grid.Column="1"
                        TextColor="#442C2E"
-                       Text="About Us"
+                       Text="Here is your progress"
                        FontSize="Large"
                        FontAttributes="Bold"
                        HorizontalTextAlignment="Center"
                        Margin="20"/>
             </Grid>
+            <Button Text="Wellbeing report" Margin="10" CornerRadius="50" Clicked="ButtonWellbeing_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
         </StackLayout>
+        
+           
+        
     </ContentPage.Content>
 </ContentPage>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:BetterU"
              x:Class="BetterU.Views.LoginPage"
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="#FEDBD0">
@@ -31,7 +32,11 @@
 
 
 
-                    <Entry Placeholder="Email" FontSize="16" x:Name="EntryUserEmail" Grid.Row="0"/>
+                    <Editor Placeholder="Email" FontSize="16" x:Name="EntryUserEmail" Grid.Row="0">
+                        <Editor.Behaviors>
+                            <local:Validation/>
+                        </Editor.Behaviors>
+                    </Editor>
 
                     <Entry Placeholder="Password" IsPassword="True" FontSize="16" x:Name="EntryUserPassword" Grid.Row="1"/>
 

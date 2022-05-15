@@ -15,6 +15,7 @@ namespace BetterU.Data
         public MobileDatabase(string dbPath)
         {
             _database = new SQLiteAsyncConnection(dbPath);
+            _database.CreateTableAsync<RegUserTable>().Wait();
             _database.CreateTableAsync<Tasks>().Wait();
             _database.CreateTableAsync<Notifications>().Wait();
             _database.CreateTableAsync<Moods>().Wait();
@@ -126,15 +127,7 @@ namespace BetterU.Data
 
         public Task<int> SavePassAsync(RegUserTable pass)
         {
-
-            if (pass.UserId != 0)
-            {
-                return _database.UpdateAsync(pass);
-            }
-            else
-            {
-                return _database.InsertAsync(pass);
-            }
+            return _database.UpdateAsync(pass);
         }
 
 

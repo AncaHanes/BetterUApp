@@ -25,9 +25,9 @@ namespace BetterU.Views
 
         async void Button_Clicked(object sender, EventArgs e)
         {
-            if(isRepeat.IsChecked)
+            if(isRepeatbutton.IsChecked)
             {
-                isRepeat.IsChecked = true;
+                isRepeatbutton.IsChecked = true;
                 await App.Database.SaveNotifAsync(new Notifications
                 {
 
@@ -66,7 +66,7 @@ namespace BetterU.Views
                 {
                   //  NotifyTime = DateTime.Now.AddSeconds(5) // Used for Scheduling local notification, if not specified notification will show immediately.
                     NotifyTime = DateTime.Today + _timePicker.Time,
-                   RepeatType = isRepeat.IsChecked ? NotificationRepeat.Daily : NotificationRepeat.No,
+                   RepeatType = isRepeatbutton.IsChecked ? NotificationRepeat.Daily : NotificationRepeat.No,
                 }
 
             };

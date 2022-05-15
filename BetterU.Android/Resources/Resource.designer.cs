@@ -23142,76 +23142,79 @@ namespace BetterU.Droid
 			public const int notify_panel_notification_icon_bg = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int play_store_512 = 2131230912;
+			public const int penita = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int plugin_lc_smallicon = 2131230913;
+			public const int play_store_512 = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int profile = 2131230914;
+			public const int plugin_lc_smallicon = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int profile1 = 2131230915;
+			public const int profile = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int read = 2131230916;
+			public const int profile1 = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int relationships = 2131230917;
+			public const int read = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int sfcheckbox_animation = 2131230918;
+			public const int relationships = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int sfcheckbox_checked = 2131230919;
+			public const int sfcheckbox_animation = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int sfcheckbox_checked_indeterminate = 2131230920;
+			public const int sfcheckbox_checked = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int sfcheckbox_checked_unchecked = 2131230921;
+			public const int sfcheckbox_checked_indeterminate = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int sfcheckbox_indeterminate = 2131230922;
+			public const int sfcheckbox_checked_unchecked = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int sfcheckbox_indeterminate_checked = 2131230923;
+			public const int sfcheckbox_indeterminate = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int sfcheckbox_indeterminate_unchecked = 2131230924;
+			public const int sfcheckbox_indeterminate_checked = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int sfcheckbox_unchecked = 2131230925;
+			public const int sfcheckbox_indeterminate_unchecked = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int sfcheckbox_unchecked_checked = 2131230926;
+			public const int sfcheckbox_unchecked = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int sfcheckbox_unchecked_indeterminate = 2131230927;
+			public const int sfcheckbox_unchecked_checked = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int sleep = 2131230928;
+			public const int sfcheckbox_unchecked_indeterminate = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int sport = 2131230929;
+			public const int sleep = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int study = 2131230930;
+			public const int sport = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int tasks = 2131230931;
+			public const int study = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int test_custom_background = 2131230932;
+			public const int tasks = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int tooltip_frame_dark = 2131230933;
+			public const int test_custom_background = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int tooltip_frame_light = 2131230934;
+			public const int tooltip_frame_dark = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int yoga = 2131230935;
+			public const int tooltip_frame_light = 2131230935;
+			
+			// aapt resource value: 0x7F0800D8
+			public const int yoga = 2131230936;
 			
 			static Drawable()
 			{

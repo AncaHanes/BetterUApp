@@ -36,7 +36,7 @@
                 
             </StackLayout>
             <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" Padding="0,0,15,0">
-                <CheckBox x:Name="isRepeat" IsChecked="{Binding isRepeatChecked}"/>
+                <CheckBox x:Name="isRepeatbutton" IsChecked="{Binding isRepeatChecked}"/>
                 <Label Text="Repeat" TextColor="#442C2E" FontAttributes="Bold"/>
             </StackLayout>
             <Button Text="Notify Me" Clicked="Button_Clicked"  BackgroundColor="#442C2E" TextColor="White" Margin="10" CornerRadius="50"/>

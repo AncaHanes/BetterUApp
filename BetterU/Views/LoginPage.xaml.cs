@@ -34,6 +34,7 @@ namespace BetterU.Views
             if (myquery != null)
             {
                 Preferences.Set("password", EntryUserPassword.Text);
+                Preferences.Set("email", EntryUserEmail.Text);
                 App.Current.MainPage = new NavigationPage(new HomePage1());
             }
             else

@@ -12,7 +12,7 @@ namespace BetterU
         public TabbedPage1()
         {
             InitializeComponent();
-            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            //On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
         }
 
     }

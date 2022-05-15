@@ -8,6 +8,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 namespace BetterU.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -25,13 +26,17 @@ namespace BetterU.Views
         async void ButtonSaveChanges_Clicked(object sender, EventArgs e)
         {
             String currentPassword = Preferences.Get("password", string.Empty);
-            var pass = new Tables.RegUserTable();
-            if(EntryPass1.Text != currentPassword)
+            String currentEmail = Preferences.Get("email", string.Empty);
+            RegUserTable pass = new Tables.RegUserTable();
+
+            
+            if (EntryPass1.Text != currentPassword)
             {
                 String newPassword = EntryPass2.Text;
                 if (EntryPass1.Text == EntryPass2.Text)
                 {
                     pass.Password = newPassword;
+                    pass.Email = currentEmail;
                     await App.Database.SavePassAsync(pass);
                     _ = DisplayAlert("", "Your password was changed with success!", "OK");
                     await Navigation.PopAsync();

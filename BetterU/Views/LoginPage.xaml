@@ -14,9 +14,11 @@
                                 HorizontalOptions="Center" >
 
                         <Image x:Name="circleImg" Source="profile1.png" ></Image>
-
+                        
                     </Frame>
-
+                    <Label Padding="0,70,0,0"
+                        Text=" 'Shoot for the moon. Even if you miss, you'll land among the stars.' - Les Brown" 
+                        HorizontalTextAlignment="Center"/>
                 </StackLayout>
                 <Grid Margin="30,0,30,0" VerticalOptions="CenterAndExpand">
                     <Grid.RowDefinitions>

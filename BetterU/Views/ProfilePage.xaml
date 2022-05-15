@@ -6,6 +6,7 @@
              BackgroundColor="#FEDBD0">
     <ContentPage.Content>
         <StackLayout>
+            <Label x:Name="labelname" HorizontalTextAlignment="Center" Margin="20"/>
             <Button Text="About Us" CornerRadius="50" Margin="10"
                     Clicked="ButtonAboutUs_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
             <Button Text="Contact Us" Margin="10" CornerRadius="50" Clicked="ButtonContactUs_Clicked" BackgroundColor="#442C2E" TextColor="White"/>

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,6 +15,8 @@ namespace BetterU.Views
         public ProfilePage()
         {
             InitializeComponent();
+            string name = Preferences.Get("username", string.Empty);
+            labelname.Text = "Hello, "+ name;
         }
 
         async void ButtonLogout_Clicked(object sender, EventArgs e)

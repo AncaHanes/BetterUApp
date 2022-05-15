@@ -11,12 +11,27 @@ namespace BetterU
        
         public ViewModel()
         {
-            LandAreas = new List<LandAreaItem>() {
-            new LandAreaItem("Very Bad", 2),
-            new LandAreaItem("Bad", 2),
-            new LandAreaItem("So and so", 1),
-            new LandAreaItem("Quite good", 4),
-            new LandAreaItem("Fantastic", 1),
+            var vb= App.Database.GetCountVBAsync();
+            var count1 = vb.Result.Count;
+
+            vb = App.Database.GetCountBAsync();
+            var count2 = vb.Result.Count;
+
+            vb = App.Database.GetCountSSAsync();
+            var count3 = vb.Result.Count;
+
+            vb = App.Database.GetCountQGAsync();
+            var count4 = vb.Result.Count;
+
+            vb = App.Database.GetCountFAsync();
+            var count5 = vb.Result.Count;
+
+            LandAreas = new List<LandAreaItem>() { 
+            new LandAreaItem("Very Bad", count1),
+            new LandAreaItem("Bad", count2),
+            new LandAreaItem("So and so", count3),
+            new LandAreaItem("Quite good", count4),
+            new LandAreaItem("Fantastic", count5),
             
         };
         }

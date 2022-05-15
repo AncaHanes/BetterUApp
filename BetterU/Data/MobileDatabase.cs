@@ -19,11 +19,32 @@ namespace BetterU.Data
             _database.CreateTableAsync<Notifications>().Wait();
             _database.CreateTableAsync<Moods>().Wait();
         }
-        public Task<List<Moods>> GetMoodsAsync()
+        public Task<List<Moods>> GetCountVBAsync()
         {
-             return _database.Table<Moods>().ToListAsync();
-
+            return _database.QueryAsync<Moods>(
+            "select * from Moods m where m.Value = 1");
         }
+        public Task<List<Moods>> GetCountBAsync()
+        {
+            return _database.QueryAsync<Moods>(
+            "select * from Moods m where m.Value = 2");
+        }
+        public Task<List<Moods>> GetCountSSAsync()
+        {
+            return _database.QueryAsync<Moods>(
+            "select * from Moods m where m.Value = 3");
+        }
+        public Task<List<Moods>> GetCountQGAsync()
+        {
+            return _database.QueryAsync<Moods>(
+            "select * from Moods m where m.Value = 4");
+        }
+        public Task<List<Moods>> GetCountFAsync()
+        {
+            return _database.QueryAsync<Moods>(
+            "select * from Moods m where m.Value = 5");
+        }
+
         public Task<List<Tasks>> GetTasksAsync()
         {
             // return _database.Table<Tasks>().ToListAsync();

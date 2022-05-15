@@ -28,9 +28,10 @@ namespace BetterU.Views
         {
             base.OnAppearing();
 
-            listView1.ItemsSource = await App.Database.GetMoodsAsync();
+            listView1.ItemsSource = await App.Database.GetCountVBAsync();
 
            
-        }*/
+        }
+        */
     }
 }

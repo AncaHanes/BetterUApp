@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:local="clr-namespace:BetterU"
-            xmlns:dxc="http://schemas.devexpress.com/xamarin/2014/forms/charts" xmlns:Tables="clr-namespace:BetterU.Tables"
+             xmlns:dxc="http://schemas.devexpress.com/xamarin/2014/forms/charts" xmlns:Tables="clr-namespace:BetterU.Tables"
              x:Class="BetterU.Views.WellbeingPage"
-              NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasNavigationBar="False"
              BackgroundColor="#FEDBD0">
-           
+
 
     <ContentPage.BindingContext>
         <local:ViewModel/>
@@ -27,5 +27,6 @@
                         VerticalPosition="Center"/>
         </dxc:PieChartView.Legend>
     </dxc:PieChartView>
+    
 
 </ContentPage>

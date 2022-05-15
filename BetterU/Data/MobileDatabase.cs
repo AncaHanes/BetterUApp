@@ -45,6 +45,18 @@ namespace BetterU.Data
             "select * from Moods m where m.Value = 5");
         }
 
+        public Task<List<Tasks>> GetCompleteTasksAsync()
+        {
+            return _database.QueryAsync<Tasks>(
+            "select * from Tasks t where t.Complete = true");
+        }
+
+        public Task<List<Tasks>> GetUncompleteTasksAsync()
+        {
+            return _database.QueryAsync<Tasks>(
+            "select * from Tasks t where t.Complete = false");
+        }
+
         public Task<List<Tasks>> GetTasksAsync()
         {
             // return _database.Table<Tasks>().ToListAsync();

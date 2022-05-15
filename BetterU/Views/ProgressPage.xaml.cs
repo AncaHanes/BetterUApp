@@ -20,5 +20,9 @@ namespace BetterU.Views
         {
             await Navigation.PushAsync(new WellbeingPage());
         }
+        async void ButtonStatus_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new StatusPage());
+        }
     }
 }

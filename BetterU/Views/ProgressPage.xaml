@@ -28,6 +28,8 @@
                        Margin="20"/>
             </Grid>
             <Button Text="Wellbeing report" Margin="10" CornerRadius="50" Clicked="ButtonWellbeing_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
+            <Button Text="Status report" Margin="10" CornerRadius="50" Clicked="ButtonStatus_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
+            <Label Text="CITAT" HorizontalOptions="CenterAndExpand"/>
         </StackLayout>
         
            

@@ -7,7 +7,7 @@ namespace BetterU
 {
     class ViewModel
     {
-        public IReadOnlyList<LandAreaItem> LandAreas { get; }
+        public IReadOnlyList<WellbeingItem> WellbeingAreas { get; }
        
         public ViewModel()
         {
@@ -26,25 +26,25 @@ namespace BetterU
             vb = App.Database.GetCountFAsync();
             var count5 = vb.Result.Count;
 
-            LandAreas = new List<LandAreaItem>() { 
-            new LandAreaItem("Very Bad", count1),
-            new LandAreaItem("Bad", count2),
-            new LandAreaItem("So and so", count3),
-            new LandAreaItem("Quite good", count4),
-            new LandAreaItem("Fantastic", count5),
+            WellbeingAreas = new List<WellbeingItem>() { 
+            new WellbeingItem("Very Bad", count1),
+            new WellbeingItem("Bad", count2),
+            new WellbeingItem("So and so", count3),
+            new WellbeingItem("Quite good", count4),
+            new WellbeingItem("Fantastic", count5),
             
         };
         }
     }
 
-    class LandAreaItem
+    class WellbeingItem
     {
-        public string CountryName { get; }
+        public string Name { get; }
         public double Area { get; }
 
-        public LandAreaItem(string countryName, double area)
+        public WellbeingItem(string name, double area)
         {
-            this.CountryName = countryName;
+            this.Name = name;
             this.Area = area;
         }
     }

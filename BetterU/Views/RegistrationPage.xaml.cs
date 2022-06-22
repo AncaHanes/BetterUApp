@@ -19,6 +19,10 @@ namespace BetterU.Views
         {
             InitializeComponent();
         }
+        private void TapBack_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
 
         private void Handle_Clicked(object sender, EventArgs e)
         {

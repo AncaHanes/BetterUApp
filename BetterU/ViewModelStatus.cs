@@ -22,8 +22,8 @@ namespace BetterU
             uncomplete = uncomplete / total * 100;
 
             TasksAreas = new List<TasksItem>() {
-            new TasksItem("Complete", complete),
-            new TasksItem("Uncomplete", uncomplete),
+            new TasksItem("Completed", complete),
+            new TasksItem("Uncompleted", uncomplete),
 
         };
         }

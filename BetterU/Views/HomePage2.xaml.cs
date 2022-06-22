@@ -17,19 +17,9 @@ namespace BetterU.Views
         {
             InitializeComponent();
         }
-
+      
         private void ImageButton_Clicked(object sender, EventArgs e)
         {
-           
-           // var radiobutton = Radiobutton(sender);
-           // var ob = radiobutton.BindingContext as Moods;
-          //  if (ob != null)
-           // {
-
-             //   AddOrUpdatetheResult(ob, radiobutton);
-
-         //   }
-
 
             Navigation.PushAsync(new GratitudePage());
         }

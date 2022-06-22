@@ -20,7 +20,7 @@
             <input:SelectionView x:Name="selectionView" ColumnSpacing="8" RowSpacing="8" Color="#442C2E"/>
 
 
-          <!--  <Button Text="Logout" CornerRadius="50" Clicked="ButtonLogout_Clicked"/> -->
+         
             <Button CornerRadius="50" Text="Start my journey" Clicked="ButtonStart_Clicked" BackgroundColor="#442C2E" TextColor="White"/>
         </StackLayout>
 

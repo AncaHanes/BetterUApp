@@ -40,7 +40,7 @@
                 <Label Text="Repeat" TextColor="#442C2E" FontAttributes="Bold"/>
             </StackLayout>
             <Button Text="Notify Me" Clicked="Button_Clicked"  BackgroundColor="#442C2E" TextColor="White" Margin="10" CornerRadius="50"/>
-            <Button Text="Cancel Notif" Clicked="Button_Clicked_1"  BackgroundColor="#442C2E" TextColor="White" Margin="10" CornerRadius="50"/>
+            <Button Text="Cancel Notifications" Clicked="Button_Clicked_1"  BackgroundColor="#442C2E" TextColor="White" Margin="10" CornerRadius="50"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

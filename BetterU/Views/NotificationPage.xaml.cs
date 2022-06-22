@@ -64,9 +64,10 @@ namespace BetterU.Views
                 },
                 Schedule =
                 {
-                  //  NotifyTime = DateTime.Now.AddSeconds(5) // Used for Scheduling local notification, if not specified notification will show immediately.
-                    NotifyTime = DateTime.Today + _timePicker.Time,
-                   RepeatType = isRepeatbutton.IsChecked ? NotificationRepeat.Daily : NotificationRepeat.No,
+                   // Used for Scheduling local notification
+                   NotifyTime = DateTime.Today + _timePicker.Time, 
+                   // Used if Repeat is checked 
+                   RepeatType = isRepeatbutton.IsChecked ? NotificationRepeat.Daily : NotificationRepeat.No, 
                 }
 
             };

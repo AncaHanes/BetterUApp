@@ -23,15 +23,6 @@ namespace BetterU.Views
         {
             Navigation.PopAsync();
         }
-        /*
-        protected override async void OnAppearing()
-        {
-            base.OnAppearing();
-
-            listView1.ItemsSource = await App.Database.GetCountVBAsync();
-
-           
-        }
-        */
+       
     }
 }

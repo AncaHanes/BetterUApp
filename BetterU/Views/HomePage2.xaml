@@ -80,7 +80,9 @@
                TextColor="Black"
                HorizontalTextAlignment="Center"
                Padding="0,0,0,150"/>
-        
+    
+
+
         <StackLayout RadioButtonGroup.GroupName="moods"
                       Orientation="Horizontal"
                      >

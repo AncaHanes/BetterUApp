@@ -51,6 +51,7 @@ namespace BetterU.Data
             return _database.QueryAsync<Tasks>(
             "select * from Tasks t where t.Complete = true");
         }
+      
 
         public Task<List<Tasks>> GetUncompleteTasksAsync()
         {
@@ -128,6 +129,7 @@ namespace BetterU.Data
         public Task<int> SavePassAsync(RegUserTable pass)
         {
             return _database.UpdateAsync(pass);
+            
         }
 
 

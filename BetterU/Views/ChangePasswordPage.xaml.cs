@@ -27,7 +27,7 @@ namespace BetterU.Views
         {
             String currentPassword = Preferences.Get("password", string.Empty);
             String currentEmail = Preferences.Get("email", string.Empty);
-            RegUserTable pass = new Tables.RegUserTable();
+            var pass = new RegUserTable();
 
             
             if (EntryPass1.Text != currentPassword)
@@ -35,8 +35,9 @@ namespace BetterU.Views
                 String newPassword = EntryPass2.Text;
                 if (EntryPass1.Text == EntryPass2.Text)
                 {
-                    pass.Password = newPassword;
-                    pass.Email = currentEmail;
+                    
+                    pass.Password = EntryPass2.Text;
+                   
                     await App.Database.SavePassAsync(pass);
                     _ = DisplayAlert("", "Your password was changed with success!", "OK");
                     await Navigation.PopAsync();
